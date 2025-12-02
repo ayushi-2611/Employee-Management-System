@@ -1,6 +1,7 @@
-package com.springbootdemo.EMS.service;
+package com.ems.attendance.service;
 
-import com.springbootdemo.EMS.entity.leave;
+
+import com.ems.attendance.entity.leave;
 
 import java.util.List;
 

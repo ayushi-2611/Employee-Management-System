@@ -1,7 +1,6 @@
-package com.springbootdemo.EMS.repository;
+package com.ems.attendance.repository;
 
-import com.springbootdemo.EMS.entity.attendance;
-import com.springbootdemo.EMS.entity.employee;
+import com.ems.attendance.entity.attendance;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

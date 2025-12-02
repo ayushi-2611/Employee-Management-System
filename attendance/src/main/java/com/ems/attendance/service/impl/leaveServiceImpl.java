@@ -1,7 +1,9 @@
-package com.springbootdemo.EMS.service.Impl;
+package com.ems.attendance.service.impl;
 
-import com.springbootdemo.EMS.entity.leave;
-import com.springbootdemo.EMS.service.leaveService;
+
+import com.ems.attendance.entity.leave;
+import com.ems.attendance.repository.leaveRepository;
+import com.ems.attendance.service.leaveService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

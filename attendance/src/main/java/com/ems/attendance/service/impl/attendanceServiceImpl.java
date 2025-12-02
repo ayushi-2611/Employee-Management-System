@@ -1,12 +1,13 @@
-package com.springbootdemo.EMS.service.Impl;
+package com.ems.attendance.service.impl;
 
-import com.springbootdemo.EMS.entity.attendance;
-import com.springbootdemo.EMS.service.attendanceService;
+
+import com.ems.attendance.entity.attendance;
+import com.ems.attendance.repository.attendanceRepository;
+import com.ems.attendance.service.attendanceService;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.client.RestTemplate;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -16,14 +17,9 @@ public class attendanceServiceImpl implements attendanceService {
     @Autowired
     private attendanceRepository attendanceRepository;
 
-    @Autowired
-    private RestTemplate restTemplate;
-
     @Override
     public List<attendance> getAttendanceByEmployeeId(int id) {
-        String url = "http://localhost:8085/ams/attendance/EmployeeId/";
-        ArrayList<attendance> saveVariable = restTemplate.getForObject(url + id, ArrayList.class);
-        return saveVariable;
+        return attendanceRepository.findByEmployeeId(id);
     }
 
     @Override
@@ -45,9 +41,10 @@ public class attendanceServiceImpl implements attendanceService {
         // Find the existing attendance record by ID
         attendance existingAttendance = (attendance) attendanceRepository.findByEmployeeId(id);
         // Update the fields (set only what you allow to be changed)
-        existingAttendance.setDate(attendance.getDate());
-        existingAttendance.setStatus(attendance.getStatus());
-        existingAttendance.setShift(attendance.getShift());
+//        existingAttendance.setDate(attendance.getDate());
+//        existingAttendance.setStatus(attendance.getStatus());
+//        existingAttendance.setShift(attendance.getShift());
+        BeanUtils.copyProperties(attendance, existingAttendance);
         return attendanceRepository.save(existingAttendance);
     }
 

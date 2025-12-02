@@ -1,4 +1,4 @@
-package com.springbootdemo.EMS.entity;
+package com.ems.attendance.entity;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;

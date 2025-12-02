@@ -1,7 +1,7 @@
-package com.springbootdemo.EMS.controller;
+package com.ems.attendance.controller;
 
-import com.springbootdemo.EMS.entity.leave;
-import com.springbootdemo.EMS.service.leaveService;
+import com.ems.attendance.entity.leave;
+import com.ems.attendance.service.leaveService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/leave")
+@RequestMapping("/ams/leave")
 public class leaveController {
 
     @Autowired

@@ -1,4 +1,4 @@
-package com.springbootdemo.EMS.entity;
+package com.ems.attendance.entity;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.Entity;
@@ -9,7 +9,6 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.time.LocalTime;
-import java.util.Date;
 
 @Entity
 @Setter
