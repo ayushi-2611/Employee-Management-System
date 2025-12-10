@@ -10,9 +10,6 @@ import java.util.List;
 @Service
 public class leaveServiceImpl implements leaveService {
 
-    @Autowired
-    private leaveRepository leaveRepository;
-
 
     @Override
     public List<leave> allLeavesForEmployee(int empId) {
